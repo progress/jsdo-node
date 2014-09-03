@@ -1,0 +1,1 @@
+This app attempts to implement the jsdo protocol from a node server. The data is stored in a MongoDB and accessed through a catalog resource. The jsdoTester subdirectory contains a node instance to test the functionality of the server.
