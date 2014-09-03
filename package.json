@@ -1,0 +1,8 @@
+{
+	"name": "node-jsdo",
+	"version": "0.0.0",
+	"dependencies":
+	{
+		"express": "3.*"
+	}
+}

@@ -1,0 +1,152 @@
+{
+    "version": "1.0",
+    "lastModified": "Tue Feb 05 19:01:31 EST 2013",
+    "services": [{
+        "name": "MobilityDemoService",
+        "address": "\/catalogData", // not sure if this is right
+        "useRequest": true,
+        "resources": [{
+            "name": "dsCustomer",
+            "path": "\/dsCustomer",
+            "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {"dsCustomer": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {"eCustomer": {
+                        "type": "array",
+                        "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "_id": {"type": "string"},
+                                "CustNum": {
+                                    "type": "integer",
+                                    "ablType": "INTEGER",
+                                    "default": 0,
+                                    "title": ""
+                                },
+                                "Name": {
+                                    "type": "string",
+                                    "ablType": "CHARACTER",
+                                    "default": "",
+                                    "title": ""
+                                },
+                                "Address": {
+                                    "type": "string",
+                                    "ablType": "CHARACTER",
+                                    "default": "",
+                                    "title": ""
+                                },
+                                "City": {
+                                    "type": "string",
+                                    "ablType": "CHARACTER",
+                                    "default": "",
+                                    "title": ""
+                                },
+                                "State": {
+                                    "type": "string",
+                                    "ablType": "CHARACTER",
+                                    "default": "",
+                                    "title": ""
+                                },
+                                "PostalCode": {
+                                    "type": "string",
+                                    "ablType": "CHARACTER",
+                                    "default": "",
+                                    "title": ""
+                                },
+                                "Country": {
+                                    "type": "string",
+                                    "ablType": "CHARACTER",
+                                    "default": "",
+                                    "title": ""
+                                },
+                                "Phone": {
+                                    "type": "string",
+                                    "ablType": "CHARACTER",
+                                    "default": "",
+                                    "title": ""
+                                },
+                                "TextRowID": {
+                                    "type": "string",
+                                    "ablType": "ROWID",
+                                    "contentEncoding": "base64",
+                                    "default": null,
+                                    "title": ""
+                                }
+                            }
+                        }
+                    }}
+                }}
+            },
+            "operations": [
+                {
+                    "name": "OrderRead",
+                    "path": "\/OrderRead",
+                    "type": "invoke",
+                    "verb": "put",
+                    "params": [
+                        {
+                            "name": "Filter",
+                            "type": "REQUEST_BODY"
+                        },
+                        {
+                            "name": "OrderPosition",
+                            "type": "REQUEST_BODY"
+                        }
+                    ]
+                },
+                {
+                    "path": "",
+                    "type": "update",
+                    "verb": "put",
+                    "params": [{
+                        "name": "dsCustomer",
+                        "type": "REQUEST_BODY"
+                    }]
+                },
+                {
+                    "path": "",
+                    "type": "create",
+                    "verb": "post",
+                    "params": [{
+                        "name": "dsCustomer",
+                        "type": "REQUEST_BODY"
+                    }]
+                },
+                {
+                    "path": "",
+                    "type": "delete",
+                    "verb": "delete",
+                    "params": [{
+                        "name": "dsCustomer",
+                        "type": "REQUEST_BODY"
+                    }]
+                },
+                {
+                    "name": "CustomRead",
+                    "path": "\/CustomRead",
+                    "type": "invoke",
+                    "verb": "put",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "type": "REQUEST_BODY"
+                        },
+                        {
+                            "name": "QryPosition",
+                            "type": "REQUEST_BODY"
+                        }
+                    ]
+                },
+                {
+                    "path": "?filter={filter}",
+                    "type": "read",
+                    "verb": "get",
+                    "params": []
+                }
+            ]
+        }]
+    }]
+}
