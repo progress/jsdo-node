@@ -15,8 +15,8 @@ app.set('port', process.env.PORT || 3000);
 XMLHttpRequest = require("./XMLHttpRequest.js").XMLHttpRequest;
 require("./progress.js");
 require("./progress.session.js");
-var serviceURI = "nodejsdo-21944.onmodulus.net";
-var catalogURI = "nodejsdo-21944.onmodulus.net/catalogURI";
+var serviceURI = "http://nodejsdo-21944.onmodulus.net";
+var catalogURI = "http://nodejsdo-21944.onmodulus.net/catalogURI";
 
 // serviceURI = 'http://oemobiledemo.progress.com/MobilityDemoService';
 // catalogURI = 'http://oemobiledemo.progress.com/MobilityDemoService/static/mobile/MobilityDemoService.json';
@@ -28,10 +28,10 @@ server.listen(app.get('port'), function()
 	console.log('express server listening on port ' + app.get('port'));
 });
 
-/*
+
 app.get('/test', function(req, res)
 {
-*/
+
 	console.log('1');
 	session = new progress.data.Session();
 	console.log('1.1');
@@ -53,10 +53,9 @@ app.get('/test', function(req, res)
 						city: jsdo.eCustomer.City, state: jsdo.eCustomer.State});
 		});
 		console.log(arr);
-		// res.write(JSON.stringify(arr));
+		res.write(JSON.stringify(arr));
+		res.end();
 		console.log('5');
 	}
-	// res.write('end');
-	// res.end();
-// });
+ });
 

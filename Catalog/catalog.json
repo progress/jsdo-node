@@ -3,7 +3,7 @@
     "lastModified": "Tue Feb 05 19:01:31 EST 2013",
     "services": [{
         "name": "MobilityDemoService",
-        "address": "\/catalogData", // not sure if this is right
+        "address": "\/catalogData",
         "useRequest": true,
         "resources": [{
             "name": "dsCustomer",
