@@ -1,3 +1,8 @@
+//  Copyright 2014 © Progress Software
+//  Contributor: David Inglis
+// Fills a MongoDB with data from a json file
+// Then checks to make sure the db was filled properly
+
 var mongoose = require('mongoose');
 var data = require('./data.json');
 var config = require('./config.json');
@@ -39,21 +44,10 @@ for(var ii = 0; ii < data.dsCustomer.eCustomer.length; ii++)
 companyModel.find(function(err, companies)
 {
 	if(err) console.log(err);
-	var temp = companies[0];
-	console.log(temp);
-	delete temp._id;
-	delete temp.__v;
-	delete temp.CustNum;
-	console.log(temp);
-
-	var myJSONObject = {"ircEvent": "PRIVMSG", "method": "newURI", "regex": "^http://.*"};
-	delete myJSONObject.regex;
-	console.log(myJSONObject);
-
 	for(var ii = 0; ii < companies.length; ii++)
 	{
-		
+		var temp = companies[ii];
+		console.log(temp);
 	}
-	
 });
 

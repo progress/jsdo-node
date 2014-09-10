@@ -1,6 +1,5 @@
-// David Inglis
-// Progress Software
-// August 2014
+//  Copyright 2014 © Progress Software
+//  Contributor: David Inglis
 // A node server that exposes data in jsdo protocol form
 
 
@@ -38,6 +37,7 @@ app.get('/', function(req, res)
 	res.end();
 });
 
+// exposes the catalog for the sample data
 app.get('/catalogURI', function(req, res)
 {
 	fs.readFile('Catalog/catalog.json', function(error, contents)
@@ -52,6 +52,7 @@ app.get('/catalogURI', function(req, res)
 	});
 });
 
+// exposes the sample data in jsdo form
 app.get('/catalogData/dscustomer', function(req, res)
 {
 	companyModel.find(function(error, companies)
@@ -64,17 +65,6 @@ app.get('/catalogData/dscustomer', function(req, res)
 		res.write(JSON.stringify(output));
 		res.end();
 	});
-	/*
-	fs.readFile('data.json', function(error, contents)
-	{
-		if(error) console.log(error);
-		else
-		{
-			res.write(contents);
-			res.end();
-		}
-	});
-	*/
 });
 
 app.get('/static/home.html', function(req, res)
