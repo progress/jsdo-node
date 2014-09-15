@@ -1,6 +1,6 @@
 {
-	"name": "AngularTest",
-	"version": "0.0.0",
+	"name": "JSDO Test",
+	"version": "0.0.1",
 	"dependencies":
 	{
 		"express": "3.*",

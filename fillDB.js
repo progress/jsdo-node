@@ -2,7 +2,6 @@
 //  Contributor: David Inglis
 // Fills a MongoDB with data from a json file
 // Then checks to make sure the db was filled properly
-
 var mongoose = require('mongoose');
 var data = require('./data.json');
 var config = require('./config.json');
@@ -11,25 +10,31 @@ var constring = 'mongodb://' + config.username + ':' + config.password + config.
 mongoose.connect(constring);
 var db = mongoose.connection;
 console.log('1');
-var companyModel = mongoose.model('company', {CustNum: String, Name: String, Address: String, City: String,
-											  State: String, PostalCode: String, Country: String, Phone: String,
-											  TextRowID: String});	
+var companyModel = mongoose.model('company', {
+    CustNum: String,
+    Name: String,
+    Address: String,
+    City: String,
+    State: String,
+    PostalCode: String,
+    Country: String,
+    Phone: String,
+    TextRowID: String
+});
 console.log(data.dsCustomer.eCustomer[0].Name);
 
-// fills the db from the data in the data.json fill
-/*
-for(var ii = 0; ii < data.dsCustomer.eCustomer.length; ii++)
+for(var i = 0; i < data.dsCustomer.eCustomer.length; i++)
 {
 	console.log('2');
-	var temp = new companyModel({CustNum: data.dsCustomer.eCustomer[ii].CustNum,
-								Name: data.dsCustomer.eCustomer[ii].Name,
-								Address: data.dsCustomer.eCustomer[ii].Address,
-								City: data.dsCustomer.eCustomer[ii].City,
-								State: data.dsCustomer.eCustomer[ii].State,
-								PostalCode: data.dsCustomer.eCustomer[ii].PostalCode,
-								Country: data.dsCustomer.eCustomer[ii].Country,
-								Phone: data.dsCustomer.eCustomer[ii].Phone,
-								TextRowID: data.dsCustomer.eCustomer[ii].TextRowID
+	var temp = new companyModel({CustNum: data.dsCustomer.eCustomer[i].CustNum,
+								Name: data.dsCustomer.eCustomer[i].Name,
+								Address: data.dsCustomer.eCustomer[i].Address,
+								City: data.dsCustomer.eCustomer[i].City,
+								State: data.dsCustomer.eCustomer[i].State,
+								PostalCode: data.dsCustomer.eCustomer[i].PostalCode,
+								Country: data.dsCustomer.eCustomer[i].Country,
+								Phone: data.dsCustomer.eCustomer[i].Phone,
+								TextRowID: data.dsCustomer.eCustomer[i].TextRowID
 	});
 
 	temp.save(function(error, success)
@@ -38,16 +43,12 @@ for(var ii = 0; ii < data.dsCustomer.eCustomer.length; ii++)
 		console.log('success');
 	});
 }
-*/
 
 // checks to make sure the DB was filled properly
-companyModel.find(function(err, companies)
-{
-	if(err) console.log(err);
-	for(var ii = 0; ii < companies.length; ii++)
-	{
-		var temp = companies[ii];
-		console.log(temp);
-	}
+companyModel.find(function(err, companies) {
+    if (err) console.log(err);
+    for (var i = 0; i < companies.length; i++) {
+        var temp = companies[i];
+        console.log(temp);
+    }
 });
-

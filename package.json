@@ -1,9 +1,10 @@
 {
 	"name": "node-jsdo",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"dependencies":
 	{
 		"express": "3.*",
-		"mongoose": "*"
+		"mongoose": "*",
+        "cors": "2.4.1"
 	}
 }
