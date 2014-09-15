@@ -1,0 +1,5 @@
+{
+    "username": "YOUR USERNAME HERE",
+    "password": "YOUR PASSWORD HERE",
+    "dbURL": "YOUR DATABASE HERE e.g. @proximus.modulusmongo.net:27017/[dbId]"
+}

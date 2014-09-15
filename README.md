@@ -7,7 +7,7 @@ This project centers around a node server that takes data stored in a MongoDB an
 2. (Optional) Run fillDB.js to fill your MongoDB with test data<br/>
 3. Run npm install <br/>
 4. Run the application by invoking node app.js <br/>
-#### To test the app
+*To test the app*
 5. Fill in your service and catalog uri's in jsdoTester/app.js
 6. Run npm install in jsdoTester/ <br/>
 7. Run jsdoTester/app.js using node <br />
@@ -15,21 +15,21 @@ This project centers around a node server that takes data stored in a MongoDB an
 
 ### Directory Descriptions
 
-    app.js                      --> main app for Service URI
-    config.json                 --> configuration details for MongoDB server
-    data.json                   --> test data used by the app
-    fillDB.js                   --> code for filling in the database with the data in data.json
-    LICENSE.txt                 --> MIT License
-    package.json                --> for npm
-    README.md                   --> this file
-    Catalog/                    --> contains the data catalog for the sample data used in the project.
-      catalog.json              --> data catalog for the sample data used in the project
-    jsdoTester/                 --> cotains a node server instance for testing the functionality of the jsdo server
-      app.js                    --> route for serving JSON. This is simulating Corticon.
-      package.json              --> for npm
-      progress.js               --> Progress code for working with JSDO
-      progress.session.js       --> Progress code for working with JSDO
-      XMLHttpRequest.js         --> Wrapper for built-in http.js to emulate the browser XMLHttpRequest object
+    app.js                  --> main app for Service URI
+    config.json             --> configuration details for MongoDB server
+    data.json               --> test data used by the app
+    fillDB.js               --> code for filling in the database with the data in data.json
+    LICENSE.txt             --> MIT License
+    package.json            --> for npm
+    README.md               --> this file
+    Catalog/                --> contains the data catalog for the sample data used
+      catalog.json          --> data catalog for the sample data used in the project
+    jsdoTester/             --> for testing the functionality of the jsdo server
+      app.js                --> route for serving JSON. This is simulating Corticon.
+      package.json          --> for npm
+      progress.js           --> Progress code for working with JSDO
+      progress.session.js   --> Progress code for working with JSDO
+      XMLHttpRequest.js     --> Wrapper for js to emulate the browser XMLHttpRequest object
 
 ### Relevant Blog Posts
 [Displaying OpenEdge Data in an AngularJS Web App](http://dcinglis.wordpress.com/2014/08/19/display-openedge-data-in-an-angularjs-web-app/)	
