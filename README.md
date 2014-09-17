@@ -1,5 +1,5 @@
 ### Project Description
-This project centers around a node server that takes data stored in a MongoDB and exposes it under the jsdo protocol. The serviceURI is http://nodejsdo-21944.onmodulus.net and the catalogURI is http://nodejsdo-21944.onmodulus.net/catalogURI. Each database requires a catalog that describes the properties of each data point and the functions available for manipulating the data. This project also contains a node file that tests the server to make sure it works properly. This can be viewed at http://angulardemo-21580.onmodulus.net/test. This data is also table-formatted using angular.js at http://statictest-21670.onmodulus.net (code not on GitHub).
+This project centers around a node server that takes data stored in a MongoDB and exposes it under the jsdo protocol. The serviceURI is http://nodejsdo-21944.onmodulus.net and the catalogURI is http://nodejsdo-21944.onmodulus.net/catalogURI. Each database requires a catalog that describes the properties of each data point and the functions available for manipulating the data. This project also contains a node file that tests the server to make sure it works properly. This can be viewed at http://angulardemo-21580.onmodulus.net/test. This data is also table-formatted using angular.js at http://statictest-21670.onmodulus.net.
 
 ### Running the app
 
@@ -12,6 +12,7 @@ This project centers around a node server that takes data stored in a MongoDB an
 6. Run npm install in jsdoTester/ <br/>
 7. Run jsdoTester/app.js using node <br />
 8. Navigate to localhost:3000/test to see if your app is working. <br />
+9. You can also open jsdoTester/public/Test.htm, which will use AngularJS to display localhost:3000/test in a prettier interface.
 
 ### Directory Descriptions
 
@@ -30,6 +31,11 @@ This project centers around a node server that takes data stored in a MongoDB an
       progress.js           --> Progress code for working with JSDO
       progress.session.js   --> Progress code for working with JSDO
       XMLHttpRequest.js     --> Wrapper for js to emulate the browser XMLHttpRequest object
+      public/               --> Displays test data in a prettier interface using AngularJS
+        Test.htm            --> HTML file to open for viewing test in table format
+        js/                 --> Contains AngularJS
+          rest.js           --> Queries jsdoTester/app.js and sends data to Test.htm
+
 
 ### Relevant Blog Posts
 [Displaying OpenEdge Data in an AngularJS Web App](http://dcinglis.wordpress.com/2014/08/19/display-openedge-data-in-an-angularjs-web-app/)	
