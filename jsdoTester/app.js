@@ -10,14 +10,18 @@ var cors = require('cors');
 
 var app = express();
 app.use(cors());
+path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('port', process.env.PORT || 3000);
+app.set('views', __dirname + '/public');
+app.set('view engine', 'jade');
 
 XMLHttpRequest = require("./XMLHttpRequest.js").XMLHttpRequest;
 require("./progress.js");
 require("./progress.session.js");
 
-var serviceURI = "SERVICE URI e.g. http://nodejsdo-21944.onmodulus.net";
-var catalogURI = "CATALOG URI e.g. http://nodejsdo-21944.onmodulus.net/catalogURI";
+var serviceURI = "YOUR URL HERE e.g. http://nodejsdo-21944.onmodulus.net";
+var catalogURI = "YOUR URL HERE e.g. http://nodejsdo-21944.onmodulus.net/catalogURI";
 
 var server = http.createServer(app);
 
@@ -54,3 +58,7 @@ app.get('/test', function(req, res)
         console.log('5');
     }
  });
+app.get('/', function(req, res){
+  res.render('main');
+}
+);

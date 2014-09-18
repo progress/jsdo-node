@@ -1,0 +1,37 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+}
+.Table {
+    width:90%;
+    box-shadow: 10px 10px 5px #888888;
+    text-align:center;
+    font-family: 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+}
+table{
+    border-collapse: collapse;
+    width:100%;
+}
+ th{
+    border:1px solid #000000;
+    border-width:0px 1px;
+    padding:10px;
+    font-size:12px;
+    font-weight:normal;
+}
+tr:first-child th{
+    background: -webkit-linear-gradient( #4c4c4c 15%, #000000); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient( #4c4c4c 15%, #000000); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient( #4c4c4c 15%, #000000); /* For Firefox 3.6 to 15 */
+    background: linear-gradient( #4c4c4c 15%, #000000); /* Standard syntax */
+    background-color:#4c4c4c;
+    border-width:0px;
+    font-size:16px;
+    color:#ffffff;
+}
+tr:nth-child(odd){
+ background-color:#e5e5e5; 
+}
+tr:nth-child(even)    {
+ background-color:#ffffff; 
+}
+

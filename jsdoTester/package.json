@@ -4,6 +4,7 @@
 	"dependencies":
 	{
 		"express": "3.*",
-		"cors": "2.4.1"
+		"cors": "2.4.1",
+        "jade":"1.7.*"
 	}
 }

@@ -1,0 +1,24 @@
+doctype html
+html(class='ng-scope', ng-app='')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=ISO-8859-1')
+    title JSDO Test
+    script(src='https://code.angularjs.org/1.2.9/angular.min.js')
+    link(rel='stylesheet', href='/app.css')
+  body
+    .ng-scope(ng-controller='App')
+      .Table
+        table
+          tr
+            th Name
+            th Address
+            th City
+            th State
+          tr.ng-scope(ng-repeat='company in companies')
+            th.ng-binding {{company.name}}
+            th.ng-binding {{company.address}}
+            th.ng-binding {{company.city}}
+            th.ng-binding {{company.state}}
+      p.ng-binding The first company's name is {{companies[0].name}}
+    script(src='/rest.js')
+

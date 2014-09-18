@@ -1,7 +1,6 @@
-function Hello($scope, $http)
+function App($scope, $http)
 {
-	//If hosted, you will need to use the url of the hosted jsdo-tester instance
-	$http({method: 'GET', url: 'http://localhost:3000/test'}).
+	$http({method: 'GET', url: '/test'}).
 	success(function(data)
 	{
 		console.log('good');
