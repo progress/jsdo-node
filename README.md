@@ -39,7 +39,8 @@ This project centers around a node server that takes data stored in a MongoDB an
 
 
 ### Relevant Blog Posts
-[Displaying OpenEdge Data in an AngularJS Web App](http://dcinglis.wordpress.com/2014/08/19/display-openedge-data-in-an-angularjs-web-app/)	
+[Displaying OpenEdge Data in an AngularJS Web App](http://dcinglis.wordpress.com/2014/08/19/display-openedge-data-in-an-angularjs-web-app/)  
+[JSDO](http://mendoncakeegan.wordpress.com/2014/09/19/48/)  
 
 ### License
 MIT
